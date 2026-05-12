@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#7c3aed" />
+  <meta name="description" content="Hanin Tarek — Computer Science student, UI/UX designer and full-stack developer. Portfolio of projects, skills, and certifications." />
+  <meta name="keywords" content="Hanin Tarek, Portfolio, UI/UX, Frontend Developer, Computer Science, React, Tailwind" />
+  <meta name="author" content="Hanin Tarek" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hanin Tarek — Portfolio" />
+  <meta property="og:description" content="UI/UX Designer & Full-Stack Developer portfolio." />
+  <meta property="og:type" content="website" />
+
+  <title>Hanin Tarek — Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%9C%3C/text%3E%3C/svg%3E" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========== LOADING ANIMATION ========== -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader__spinner"></div>
+    <p class="loader__text">Hanin Tarek</p>
+  </div>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav__container">
+      <a href="#home" class="nav__logo">
+        <span class="logo__mark">HT</span>
+        <span class="logo__text">Hanin Tarek</span>
+      </a>
+
+      <nav class="nav__menu" id="navMenu" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link active">Home</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li><a href="#certifications" class="nav__link">Certifications</a></li>
+          <li><a href="#activities" class="nav__link">Activities</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav__actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section id="home" class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="blob blob--1"></div>
+        <div class="blob blob--2"></div>
+        <div class="blob blob--3"></div>
+      </div>
+
+      <div class="container hero__container">
+        <div class="hero__text reveal">
+          <p class="hero__greeting">Hello, I'm</p>
+          <h1 class="hero__name">Hanin Tarek</h1>
+          <h2 class="hero__title">
+            <span id="typed"></span><span class="cursor">|</span>
+          </h2>
+          <p class="hero__desc">
+            Passionate about creating modern, user-friendly, and responsive
+            digital experiences through UI/UX design and frontend development.
+          </p>
+
+          <div class="hero__buttons">
+            <a href="#projects" class="btn btn--primary">
+              <i class="fa-solid fa-folder-open"></i> View Projects
+            </a>
+            <a href="#contact" class="btn btn--ghost">
+              <i class="fa-solid fa-paper-plane"></i> Contact Me
+            </a>
+            <!-- Download CV — points to assets/CV-HaninTarek.pdf -->
+            <a href="assets/CV-HaninTarek.pdf" download class="btn btn--outline">
+              <i class="fa-solid fa-download"></i> Download CV
+            </a>
+          </div>
+
+          <div class="hero__socials">
+            <a href="https://github.com/haninotarek" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/hanin-tarek-04900230b" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:haninotarek222@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="hero__image reveal">
+          <div class="profile-ring">
+            <div class="profile-circle">
+              <!--
+                PLACE YOUR PROFILE IMAGE HERE
+                Put your photo at assets/profile.png (or change the src below).
+              -->
+              <img src="assets/profile.png" alt="Hanin Tarek" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="profile-fallback">
+                <i class="fa-solid fa-user"></i>
+                <span>PLACE YOUR PROFILE IMAGE HERE</span>
+              </div>
+            </div>
+          </div>
+          <div class="floating-badge badge--1"><i class="fa-solid fa-code"></i> Developer</div>
+          <div class="floating-badge badge--2"><i class="fa-solid fa-palette"></i> Designer</div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-down" aria-label="Scroll to About section">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section">
+      <div class="container">
+        <header class="section__header reveal">
+          <p class="section__eyebrow">Get To Know</p>
+          <h2 class="section__title">About Me</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <div class="about__grid">
+          <div class="about__card glass reveal">
+            <i class="fa-solid fa-graduation-cap about__icon"></i>
+            <h3>Education</h3>
+            <p>Computer Science Student exploring software engineering and design.</p>
+          </div>
+          <div class="about__card glass reveal">
+            <i class="fa-solid fa-code about__icon"></i>
+            <h3>Development</h3>
+            <p>Building responsive web apps with React, Node.js, and modern tooling.</p>
+          </div>
+          <div class="about__card glass reveal">
+            <i class="fa-solid fa-pen-ruler about__icon"></i>
+            <h3>UI/UX Design</h3>
+            <p>Designing clean, accessible interfaces with Figma & user-first thinking.</p>
+          </div>
+
+          <div class="about__text glass reveal">
+            <p>
+              I'm a Computer Science student passionate about
+              <strong>UI/UX design</strong>, <strong>full stack development</strong>,
+              problem solving, and creating clean digital experiences. I enjoy building
+              responsive websites and continuously improving my technical and creative
+              skills through projects, self-learning, and competitive programming.
+            </p>
+            <div class="about__stats">
+              <div class="stat">
+                <span class="stat__num" data-count="10">0</span><span>+</span>
+                <p>Projects</p>
+              </div>
+              <div class="stat">
+                <span class="stat__num" data-count="6">0</span><span>+</span>
+                <p>Certifications</p>
+              </div>
+              <div class="stat">
+                <span class="stat__num" data-count="3">0</span><span>+</span>
+                <p>Years Coding</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section section--alt">
+      <div class="container">
+        <header class="section__header reveal">
+          <p class="section__eyebrow">What I Know</p>
+          <h2 class="section__title">My Skills</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <div class="skills__grid">
+
+          <article class="skills__card glass reveal">
+            <header><i class="fa-solid fa-layer-group"></i><h3>Frontend</h3></header>
+            <ul class="skill-list">
+              <li><span>HTML5</span><div class="bar"><div class="fill" data-fill="95"></div></div></li>
+              <li><span>CSS3</span><div class="bar"><div class="fill" data-fill="90"></div></div></li>
+              <li><span>JavaScript</span><div class="bar"><div class="fill" data-fill="85"></div></div></li>
+              <li><span>React.js</span><div class="bar"><div class="fill" data-fill="80"></div></div></li>
+              <li><span>Tailwind CSS</span><div class="bar"><div class="fill" data-fill="85"></div></div></li>
+            </ul>
+          </article>
+
+          <article class="skills__card glass reveal">
+            <header><i class="fa-solid fa-server"></i><h3>Backend</h3></header>
+            <ul class="skill-list">
+              <li><span>Node.js</span><div class="bar"><div class="fill" data-fill="75"></div></div></li>
+              <li><span>Express.js</span><div class="bar"><div class="fill" data-fill="70"></div></div></li>
+            </ul>
+          </article>
+
+          <article class="skills__card glass reveal">
+            <header><i class="fa-solid fa-terminal"></i><h3>Programming</h3></header>
+            <div class="chip-grid">
+              <span class="chip">C++</span>
+              <span class="chip">Python</span>
+              <span class="chip">Java</span>
+              <span class="chip">JavaScript</span>
+            </div>
+          </article>
+
+          <article class="skills__card glass reveal">
+            <header><i class="fa-solid fa-pen-ruler"></i><h3>UI/UX</h3></header>
+            <div class="chip-grid">
+              <span class="chip"><i class="fa-brands fa-figma"></i> Figma</span>
+              <span class="chip">Wireframing</span>
+              <span class="chip">User Experience</span>
+              <span class="chip">UI Design</span>
+            </div>
+          </article>
+
+          <article class="skills__card glass reveal">
+            <header><i class="fa-solid fa-database"></i><h3>Database</h3></header>
+            <div class="chip-grid">
+              <span class="chip">MongoDB</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">SQL</span>
+              <span class="chip">PostgreSQL</span>
+            </div>
+          </article>
+
+          <article class="skills__card glass reveal">
+            <header><i class="fa-solid fa-chart-column"></i><h3>Data & Analytics</h3></header>
+            <div class="chip-grid">
+              <span class="chip">Power BI</span>
+              <span class="chip">Data Analysis</span>
+            </div>
+          </article>
+
+          <article class="skills__card glass reveal">
+            <header><i class="fa-solid fa-screwdriver-wrench"></i><h3>Tools</h3></header>
+            <div class="chip-grid">
+              <span class="chip"><i class="fa-brands fa-git-alt"></i> Git</span>
+              <span class="chip"><i class="fa-brands fa-github"></i> GitHub</span>
+              <span class="chip">VS Code</span>
+              <span class="chip">Cursor</span>
+              <span class="chip"><i class="fa-brands fa-linux"></i> Linux</span>
+            </div>
+          </article>
+
+          <article class="skills__card glass reveal">
+            <header><i class="fa-solid fa-lightbulb"></i><h3>Other Skills</h3></header>
+            <div class="chip-grid">
+              <span class="chip">Problem Solving</span>
+              <span class="chip">Data Structures</span>
+              <span class="chip">Algorithms</span>
+              <span class="chip">OOP</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <header class="section__header reveal">
+          <p class="section__eyebrow">My Recent Work</p>
+          <h2 class="section__title">Projects</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <div class="projects__grid">
+
+          <!-- Project 1: HealthHub (has GitHub link) -->
+          <article class="project-card glass reveal">
+            <div class="project-card__image">
+              <div class="project-placeholder">
+                <i class="fa-solid fa-hospital"></i>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3>HealthHub Smart Clinic System</h3>
+              <p>A smart clinic management desktop application developed using Java Swing to help organize patient records, appointments, and clinic operations with a clean and user-friendly interface.</p>
+              <div class="tech-list">
+                <span>Java</span><span>Java Swing</span><span>OOP</span><span>MySQL</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://github.com/haninotarek/HealthHub-Project.git" target="_blank" rel="noopener" class="btn btn--small">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: E-Commerce (no GitHub link) -->
+          <article class="project-card glass reveal">
+            <div class="project-card__image">
+              <div class="project-placeholder">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3>E-Commerce Website</h3>
+              <p>A full-stack e-commerce platform with responsive design and product management features.</p>
+              <div class="tech-list">
+                <span>React.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Personal Portfolio (has GitHub link) -->
+          <article class="project-card glass reveal">
+            <div class="project-card__image">
+              <div class="project-placeholder">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3>Personal Portfolio Website</h3>
+              <p>A modern responsive portfolio website showcasing projects, skills, and achievements.</p>
+              <div class="tech-list">
+                <span>React.js</span><span>Tailwind CSS</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="https://github.com/haninotarek/A-simple-portofolio.git" target="_blank" rel="noopener" class="btn btn--small">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: To-Do List (no GitHub link) -->
+          <article class="project-card glass reveal">
+            <div class="project-card__image">
+              <div class="project-placeholder">
+                <i class="fa-solid fa-list-check"></i>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3>To-Do List Web App</h3>
+              <p>A clean and user-friendly task management application for organizing daily activities.</p>
+              <div class="tech-list">
+                <span>React.js</span><span>JavaScript</span><span>LocalStorage</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CERTIFICATIONS ========== -->
+    <section id="certifications" class="section section--alt">
+      <div class="container">
+        <header class="section__header reveal">
+          <p class="section__eyebrow">Continuous Learning</p>
+          <h2 class="section__title">Certifications</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <div class="cert__grid">
+          <div class="cert__card glass reveal">
+            <i class="fa-brands fa-js cert__icon"></i>
+            <h3>JavaScript Fundamentals to Advanced</h3>
+            <p>Modern JavaScript & ES6+ concepts</p>
+          </div>
+          <div class="cert__card glass reveal">
+            <i class="fa-solid fa-shield-halved cert__icon"></i>
+            <h3>Cybersecurity Foundations</h3>
+            <p>Security principles & best practices</p>
+          </div>
+          <div class="cert__card glass reveal">
+            <i class="fa-solid fa-mobile-screen cert__icon"></i>
+            <h3>Flutter Mobile Development</h3>
+            <p>Cross-platform mobile apps</p>
+          </div>
+          <div class="cert__card glass reveal">
+            <i class="fa-brands fa-python cert__icon"></i>
+            <h3>Python Programming</h3>
+            <p>Core Python & applications</p>
+          </div>
+          <div class="cert__card glass reveal">
+            <i class="fa-solid fa-rocket cert__icon"></i>
+            <h3>ITIDA InnovEgypt Program</h3>
+            <p>Innovation & entrepreneurship</p>
+          </div>
+          <div class="cert__card glass reveal">
+            <i class="fa-solid fa-trophy cert__icon"></i>
+            <h3>ICPC / ACPC Participation</h3>
+            <p>Competitive programming contests</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ACTIVITIES ========== -->
+    <section id="activities" class="section">
+      <div class="container">
+        <header class="section__header reveal">
+          <p class="section__eyebrow">Beyond the Code</p>
+          <h2 class="section__title">Activities</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <div class="activities__grid">
+          <div class="activity glass reveal">
+            <i class="fa-solid fa-code"></i>
+            <h3>Competitive Programming</h3>
+            <p>Sharpening problem-solving skills with algorithmic challenges.</p>
+          </div>
+          <div class="activity glass reveal">
+            <i class="fa-solid fa-medal"></i>
+            <h3>ACPC Participation</h3>
+            <p>Participating in the Arab Collegiate Programming Contest.</p>
+          </div>
+          <div class="activity glass reveal">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Problem Solving Practice</h3>
+            <p>Daily practice on platforms like Codeforces & LeetCode.</p>
+          </div>
+          <div class="activity glass reveal">
+            <i class="fa-solid fa-people-group"></i>
+            <h3>Team Projects</h3>
+            <p>Collaborating on real-world projects with cross-functional teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="section section--alt">
+      <div class="container">
+        <header class="section__header reveal">
+          <p class="section__eyebrow">Get In Touch</p>
+          <h2 class="section__title">Contact Me</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <div class="contact__grid">
+
+          <div class="contact__info glass reveal">
+            <h3>Let's Work Together</h3>
+            <p>Have a project in mind, or just want to say hi? I'd love to hear from you.</p>
+
+            <ul class="contact__list">
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <span>Email</span>
+                  <a href="mailto:haninotarek222@gmail.com">haninotarek222@gmail.com</a>
+                </div>
+              </li>
+              <li>
+                <i class="fa-brands fa-linkedin"></i>
+                <div>
+                  <span>LinkedIn</span>
+                  <a href="https://www.linkedin.com/in/hanin-tarek-04900230b" target="_blank" rel="noopener">hanin-tarek</a>
+                </div>
+              </li>
+              <li>
+                <i class="fa-brands fa-github"></i>
+                <div>
+                  <span>GitHub</span>
+                  <a href="https://github.com/haninotarek" target="_blank" rel="noopener">@haninotarek</a>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contact__socials">
+              <a href="https://github.com/haninotarek" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/in/hanin-tarek-04900230b" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="mailto:haninotarek222@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <form id="contactForm" class="contact__form glass reveal" novalidate>
+            <div class="form__group">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required />
+            </div>
+            <div class="form__group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+            <div class="form__group">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="What's this about?" />
+            </div>
+            <div class="form__group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+            <p id="formStatus" class="form__status" role="status"></p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <a href="#home" class="nav__logo">
+        <span class="logo__mark">HT</span>
+        <span class="logo__text">Hanin Tarek</span>
+      </a>
+
+      <p class="footer__text">Hanin Tarek Portfolio &copy; 2026</p>
+
+      <div class="footer__socials">
+        <a href="https://github.com/haninotarek" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/hanin-tarek-04900230b" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:haninotarek222@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
