@@ -1,16 +1,11 @@
-/* =========================================================
-   Hanin Tarek — Portfolio Scripts
-   ========================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ---------- Loader ---------- */
   const loader = document.getElementById('loader');
   window.addEventListener('load', () => {
     setTimeout(() => loader?.classList.add('hidden'), 600);
   });
 
-  /* ---------- Theme Toggle ---------- */
   const themeToggle = document.getElementById('themeToggle');
   const themeIcon = themeToggle?.querySelector('i');
   const savedTheme = localStorage.getItem('theme') || 'light';
@@ -30,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTheme(current === 'light' ? 'dark' : 'light');
   });
 
-  /* ---------- Mobile Menu ---------- */
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('navMenu');
 
@@ -48,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ---------- Navbar Scroll Effect ---------- */
   const navbar = document.getElementById('navbar');
   const scrollTopBtn = document.getElementById('scrollTop');
   const sections = document.querySelectorAll('section[id]');
@@ -80,18 +73,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  /* ---------- Scroll to Top ---------- */
   scrollTopBtn?.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
-  /* ---------- Typing animation ---------- */
   const typedEl = document.getElementById('typed');
   if (typedEl) {
     const phrases = [
-      'Computer Science Student',
-      'UI/UX Designer',
       'Full-Stack Developer',
+      'React & Node.js Developer',
+      'Angular Developer',
+      'Backend Engineer',
+      'Computer Science Student',
       'Problem Solver'
     ];
 
@@ -126,8 +119,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     tick();
   }
-
-  /* ---------- Scroll Reveal ---------- */
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -138,8 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
 
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-  /* ---------- Skill bars animation ---------- */
   const skillObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -153,7 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.fill').forEach(el => skillObserver.observe(el));
 
-  /* ---------- Stat counter ---------- */
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -174,7 +162,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('.stat__num').forEach(el => counterObserver.observe(el));
 
-  /* ---------- Contact form ---------- */
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
 
@@ -198,8 +185,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Opens the user's email client with the message prefilled.
-    // To use a backend instead, replace with EmailJS / Formspree / your API.
     const subject = encodeURIComponent(form.subject.value.trim() || 'Portfolio Contact');
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
     window.location.href = `mailto:haninotarek222@gmail.com?subject=${subject}&body=${body}`;
