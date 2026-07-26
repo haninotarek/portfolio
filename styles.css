@@ -1,4 +1,11 @@
-* ---------- CSS Variables ---------- */ :root {
+/* =========================================================
+   Hanin Tarek — Portfolio Stylesheet
+   Palette: soft purple + white + dark text
+   Design: glassmorphism, soft shadows, rounded corners
+   ========================================================= */
+
+/* ---------- CSS Variables ---------- */
+:root {
   --purple-50: #f5f3ff;
   --purple-100: #ede9fe;
   --purple-200: #ddd6fe;
@@ -40,6 +47,7 @@
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Dark theme */
 [data-theme="dark"] {
   --white: #1e1b2e;
   --bg: #0f0d1a;
@@ -59,6 +67,7 @@
   --gradient-soft: linear-gradient(135deg, #2a2540 0%, #3b3258 100%);
 }
 
+/* ---------- Reset ---------- */
 *,
 *::before,
 *::after {
@@ -117,6 +126,7 @@ textarea {
   font-size: 1rem;
 }
 
+/* ---------- Layout helpers ---------- */
 .container {
   width: 100%;
   max-width: var(--container);
@@ -165,6 +175,7 @@ textarea {
   border-radius: 4px;
 }
 
+/* ---------- Glassmorphism ---------- */
 .glass {
   background: var(--surface);
   backdrop-filter: blur(12px);
@@ -182,6 +193,7 @@ textarea {
   box-shadow: var(--shadow-lg);
 }
 
+/* ---------- Loader ---------- */
 .loader {
   position: fixed;
   inset: 0;
@@ -224,6 +236,7 @@ textarea {
   }
 }
 
+/* ---------- Navbar ---------- */
 .navbar {
   position: fixed;
   top: 0;
@@ -365,6 +378,7 @@ textarea {
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* ---------- Buttons ---------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -425,6 +439,7 @@ textarea {
   width: 100%;
 }
 
+/* ---------- Hero ---------- */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -994,6 +1009,7 @@ textarea {
   font-size: 0.9rem;
 }
 
+/* ---------- Activities ---------- */
 .activities__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1167,6 +1183,7 @@ textarea {
   color: #ef4444;
 }
 
+/* ---------- Footer ---------- */
 .footer {
   padding: 2rem 0;
   background: var(--bg-alt);
@@ -1210,6 +1227,7 @@ textarea {
   transform: translateY(-2px);
 }
 
+/* ---------- Scroll to top ---------- */
 .scroll-top {
   position: fixed;
   bottom: 2rem;
@@ -1378,6 +1396,7 @@ textarea {
   }
 }
 
+/* ---------- Accessibility ---------- */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
