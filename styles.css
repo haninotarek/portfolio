@@ -548,25 +548,8 @@ textarea {
 .hero__desc {
   color: var(--text-soft);
   font-size: 1.05rem;
-  margin-bottom: 1.25rem;
-  max-width: 540px;
-}
-
-.hero__usp {
-  max-width: 540px;
   margin-bottom: 2rem;
-  padding: 0.85rem 1.1rem;
-  border-left: 3px solid var(--purple-500);
-  border-radius: 0.6rem;
-  background: var(--gradient-soft);
-  color: var(--text);
-  font-style: italic;
-  font-weight: 500;
-}
-
-.hero__usp i {
-  color: var(--purple-500);
-  margin-right: 0.4rem;
+  max-width: 540px;
 }
 
 .hero__buttons {
