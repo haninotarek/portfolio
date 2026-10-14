@@ -548,8 +548,25 @@ textarea {
 .hero__desc {
   color: var(--text-soft);
   font-size: 1.05rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   max-width: 540px;
+}
+
+.hero__usp {
+  max-width: 540px;
+  margin-bottom: 2rem;
+  padding: 0.85rem 1.1rem;
+  border-left: 3px solid var(--purple-500);
+  border-radius: 0.6rem;
+  background: var(--gradient-soft);
+  color: var(--text);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.hero__usp i {
+  color: var(--purple-500);
+  margin-right: 0.4rem;
 }
 
 .hero__buttons {
@@ -920,6 +937,18 @@ textarea {
 
 .project-card:hover .project-card__image::before {
   opacity: 0.1;
+}
+
+.project-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform var(--transition);
+}
+
+.project-card:hover .project-card__image img {
+  transform: scale(1.05);
 }
 
 .project-placeholder {
